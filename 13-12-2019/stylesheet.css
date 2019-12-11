@@ -55,7 +55,6 @@ nav form .bt-shadow {
 }
 
 .button-list li {
-    width: 150px;
     border: 2px solid black;
     display: flex;
     align-items: center;
