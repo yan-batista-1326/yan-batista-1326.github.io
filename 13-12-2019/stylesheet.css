@@ -55,7 +55,6 @@ nav form .bt-shadow {
 }
 
 .button-list li {
-    border: 2px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,8 +62,12 @@ nav form .bt-shadow {
 }
 
 nav .button-list li a {
+    border: 2px solid black;
+    text-align: center;
     text-decoration: none;
     color: black;
+    width: 150px;
+    padding: 5px 0px;
 }
 
 .bold {
@@ -78,7 +81,7 @@ nav .button-list li a {
 
 /*ASIDE (LEFT SIDE)*/
 .aside-left {
-    grid-area: aside-l;  
+    grid-area: aside-l;
 }
 
 .aside-left figure {
@@ -87,10 +90,13 @@ nav .button-list li a {
     align-items: center;
     background-color: gray;
     border: 2px solid black;
+    margin-left: 0px;
+    width: 100%;
 }
 
 .aside-left ul {
     list-style-type: none;
+    padding-left: 0px;
 }
 
 .aside-left ul li a {
@@ -99,21 +105,25 @@ nav .button-list li a {
 }
 
 .aside-left .button-list li {
-    margin: 20px 0px;
-    width: 200px;
-    border: 2px solid black;
-    padding: 5px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0px;
 }
 
 .aside-left .button-list li a{
-    margin-left: 5px;
+    border: 2px solid black;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    padding: 5px 2px;
 }
 
 .aside-left .h-list {
     border: 2px solid black;
     padding: 0px;
-    margin-left: 40px;
     margin-right: 35px;
+    width: 100%;
 }
 
 .aside-left .h-list li {
@@ -121,7 +131,6 @@ nav .button-list li a {
 }
 
 .aside-left h2 {
-    margin-left: 40px;
     margin-bottom: -10px;
 }
 
@@ -129,7 +138,6 @@ nav .button-list li a {
 .aside-right {
     grid-area: aside-r;
 }
-
 
 .aside-right .main-spotlight {
     display: flex;
