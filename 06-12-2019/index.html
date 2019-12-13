@@ -1,36 +1,79 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-	<title>HTML5</title>
-	<meta charset="UTF-8">
-	<meta name="description" content="Marcações HTML5">
-	<meta name="author" content="Yan"> 
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body class="container">
-	<header>Título do Site</header>
-	<nav>
-		<ul>
-			<li><a href="#">Link 1</a></li>
-			<li><a href="#">Link 1</a></li>
-			<li><a href="#">Link 1</a></li>
-			<li><a href="#">Link 1</a></li>
-			<li><a href="#">Link 1</a></li>
-			<li><a href="#">Link 1</a></li>
-		</ul>
-	</nav>
-	
-	<section>
-		<article>
-			<h3 class="title">Titulo do artigo</h3>
-			<p class="date">12/12/2012</p>
-			<p class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed congue sem. In lorem justo, laoreet pellentesque tellus sed, rutrum congue enim. Mauris fringilla ipsum tortor, eu vestibulum dolor maximus sed. In varius id mi eget commodo. Integer non ultricies mi. Quisque eget tristique diam. Sed iaculis lacus a varius aliquet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris purus urna, ultricies at ultricies et, porttitor id orci. Duis sem felis, hendrerit at nisl ac, scelerisque luctus quam.</p>
-			<span class="author">Por Fulano</span>
-		</article>
-	</section>
+.container {
+	display: grid;
+	grid-template: 
+		"header header"
+		"nav nav" 
+		"section aside" 
+		"footer footer" 
+		/ 1.5fr 0.5fr
+}
 
-	<aside><h2>ASIDE</h2></aside>
-	<footer>
-		<a href="https://iff.edu.br">IF Fluminense - DGTI</a>
-	</footer>
-</body>
+header {
+	grid-area: header;
+	background-color: tomato;
+	font-size: 30px;
+	font-weight: bold;
+	padding-bottom: 50px;
+}
+
+nav {
+	grid-area: nav;
+	background-color: yellow;
+}
+
+section {
+	grid-area: section;
+    display: flex;
+    flex-direction: row;
+}
+
+section * {
+    margin: 0px;
+}
+
+section p, h3 {
+    padding-left: 5px;
+}
+
+aside {
+	grid-area: aside;
+	background-color: #5765CC;
+}
+
+footer {
+	grid-area: footer;
+	background-color: #468DC7;
+	padding: 5px;
+}
+
+footer a {
+	background-color: white;
+	color: orange;
+}
+
+nav ul {
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	padding: 0px;
+}
+
+nav ul li a {
+	padding: 5px;
+}
+
+section .title {
+    background-color: rgb(180, 121, 73);
+}
+
+section .date {
+    background-color: rgb(180, 121, 73);
+}
+
+section .texto {
+    background-color: rgb(129, 31, 129);
+}
+
+section .author {
+    background-color: rgb(71, 15, 71);
+}
