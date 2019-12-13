@@ -23,8 +23,16 @@ nav {
 
 section {
 	grid-area: section;
-	display: flex;
-	flex-direction: row;
+    display: flex;
+    flex-direction: row;
+}
+
+section * {
+    margin: 0px;
+}
+
+section p, h3 {
+    padding-left: 5px;
 }
 
 aside {
@@ -55,23 +63,17 @@ nav ul li a {
 }
 
 section .title {
-	grid-area: title;
-	background-color: ;
+    background-color: rgb(180, 121, 73);
 }
 
 section .date {
-	grid-area: date;
+    background-color: rgb(180, 121, 73);
 }
 
 section .texto {
-	grid-area: texto;
+    background-color: rgb(129, 31, 129);
 }
 
 section .author {
-	grid-area: author;
+    background-color: rgb(71, 15, 71);
 }
-
-
-
-
-
