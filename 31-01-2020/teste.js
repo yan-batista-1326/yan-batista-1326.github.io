@@ -6,9 +6,9 @@ function confirmacao() {
 	confirm("Testando uma confirmação");
 }
 
-function prompt() {
+function disparar_prompt() {
 	var x = window.prompt("Informe o número: ");
-	(x == reverteStr(x) ? alert("É um palindromo" : alert("Não é um palindromo")));
+	(x == reverteStr(x) ? alert("É um palindromo") : alert("Não é um palindromo"));
 }
 
 function reverteStr(str) {
