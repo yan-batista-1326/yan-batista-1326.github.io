@@ -1,102 +1,107 @@
 class Agenda {
-  constructor() {
-    this.contato = [];
-  }
-    
-  addContato(nome, sobrenome, nascimento, tipo, ddd, num) {
-    this.contato.push(new Contato(new Pessoa(nome, sobrenome, nascimento), new Numero(tipo, ddd, num)));
-    console.log("Contato adicionado");
-  }
+    constructor() {
+        this.contatos = [];
+    }
 
-  criarContato() {
-    var nome = window.prompt("Informe o nome");
-    var sobrenome = window.prompt("Informe o sobrenome");
-    var nascimento = window.prompt("Informe a data de nascimento");
-    var tipo = window.prompt("Informe o tipo do telefone");
-    var ddd = window.prompt("Informe o DDD");
-    var numero = window.prompt("Informe o número");
-    console.log(this);
-    this.addContato(nome, sobrenome, nascimento, tipo, ddd, numero);
-  }
+    addContato(nome, sobrenome, data_nasc, n_tipo, ddd, n_num, end_tipo, logradouro, end_num, cep, complemento, email, e_tipo) {
+        this.contatos.push(new Contato(new Pessoa(nome, sobrenome, data_nasc), new Numero(n_tipo, ddd, n_num), new Endereco(end_tipo, logradouro, end_num, cep, complemento), new Email(email, e_tipo)));   
+    }
+
+    criarContato() {
+        var mensagens = ["nome", "sobrenome", "data de nascimento", "tipo de telefone", "DDD", "Número do telefone", "Tipo de endereço","Logradouro", "Número da casa", "CEP", "Complemento", "Email", "Tipo de email"];
+        var dados = [];
+        for(var i = 0; i < mensagens.length; i++) {
+            dados.push(window.prompt("Informe " + mensagens[i]));
+        }
+
+        agenda.addContato(dados[0],dados[1],dados[2],dados[3],dados[4],dados[5],dados[6],dados[7],dados[8],dados[9],dados[10],dados[11],dados[12]);
+    }
 }
 
 class Contato {
-    constructor(pessoa, numero) {
-      this.pessoa = pessoa;
-      this.numero = []
-      this.numero.push(numero);
-      this.end = [];
-      this.email = [];
+    constructor(pessoa, numero, end, email) {
+        this.pessoa = pessoa;
+        this.numero = [];
+        this.numero.push(numero);
+        this.end = [];
+        this.end.push(end);
+        this.email = [];
+        this.email.push(email);
     }
-    
-    adicionarNovo() {
-      var x = window.prompt("Inserir novo Número(1), Endereço(2), Email(3):");
-      if(x == 1) {
-        var tipo = prompt("Tipo de telefone");
-        var ddd = prompt("DDD");
-        var num = prompt("Numero");
-        this.addNumero(tipo, ddd, num);
-      } else if(x == 2) {
-        var tipo = prompt("Tipo do Endereço");
-        var logradouro = prompt("Logradouro");
-        var num = prompt("Numero");
-        var cep = prompt("CEP");
-        var complemento = prompt("Complemento");
-        this.addEndereco(tipo, logradouro, num, cep, complemento);
-      } else if(x == 3) {
-        var tipo = prompt("Tipo de Email");
-        var email = prompt("Email");
-        this.addEmail(tipo, email);
-      } else {
-        alert("Entre com os número entre 1 e 3");
-        this.adicionarNovo();
-      }
+
+    addNovo() {
+        var opcao = window.prompt("Digite a opção: Número(1), Endereço(2), Email(3)");
+        if(opcao == 1) {
+            var n_tipo = window.prompt("Digite o tipo");
+            var ddd = window.prompt("Digite o ddd");
+            var n_num = window.prompt("Digite o número");
+            this.addNum(n_tipo, ddd, n_num);
+        } else if (opcao == 2) {
+            var end_tipo = window.prompt("Digite o tipo");
+            var logradouro = window.prompt("Digite o logradouro");
+            var num = window.prompt("Digite o Número");
+            var cep = window.prompt("Digite o cep");
+            var complemento = window.prompt("Digite o complemento");
+            this.addEnd(end_tipo, logradouro, num, cep, complemento)
+        } else if (opcao == 3){
+            var tipo = window.prompt("Digite o tipo");
+            var email = window.prompt("Digite o email");
+            this.addEmail(tipo, email)
+        } else {
+            alert("Opção Inválida");
+            this.addNovo();
+        }
     }
-    
-    addNumero(tipo, ddd, num) {
-      this.numero.push(new Numero(tipo, ddd, num));
+
+    addNum(n_tipo, ddd, n_num) {
+        this.numero.push(new Numero(n_tipo, ddd, n_num));
     }
-    
-    addEndereco(tipo, logradouro, num, cep, complemento) {
-      this.end.push(new Endereco(tipo, logradouro, num, cep, complemento));
+
+    addEnd(end_tipo, logradouro, num, cep, complemento) {
+        this.end.push(new Endereco(end_tipo, logradouro, num, cep, complemento));
     }
-    
+
     addEmail(tipo, email) {
-      this.email.push(new Email(tipo, email));
+        this.email.push(new Email(tipo, email));
     }
-  }
+}
 
 class Pessoa {
-    constructor(nome, sobrenome, nascimento) {
-      this.nome = nome;
-      this.sobrenome = sobrenome;
-      this.nascimento = nascimento;
+    constructor(nome, sobrenome, data_nasc) {
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+        this.data_nasc = data_nasc;
     }
-  }
+}
 
 class Numero {
     constructor(tipo, ddd, num) {
-      this.tipo = tipo;
-      this.ddd = ddd;
-      this.num = num;
+        this.tipo = tipo;
+        this.ddd = ddd;
+        this.num = num;
     }
-  }
+}
 
 class Endereco {
     constructor(tipo, logradouro, num, cep, complemento) {
-      this.tipo = tipo;
-      this.logradouro = logradouro;
-      this.num = num;
-      this.cep = cep;
-      this.complemento = complemento;
+        this.tipo = tipo;
+        this.logradouro = logradouro;
+        this.num = num;
+        this.cep = cep;
+        this.complemento = complemento;
     }
-  }
+}
 
 class Email {
-  constructor(tipo, email) {
-    this.tipo = tipo;
-    this.email = email;
-  }
+    constructor(tipo, email) {
+        this.email = email;
+        this.tipo = tipo;
+    }
 }
 
 var agenda = new Agenda();
+
+window.addEventListener('load', function() {
+    var criar = document.getElementById('criar');
+    criar.addEventListener('click', agenda.criarContato, false);
+});

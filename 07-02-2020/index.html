@@ -1,18 +1,11 @@
- <!DOCTYPE html>
-  <html lang="pt-br">
-	<head>
-    <meta charset="utf-8">
-    <meta name="keywords" content="JS, JavaScript">
-    <meta name="description" content="Agenda em JavaScript">
-    <meta name="author" content="Yan Batista">
-    <title>Exercicios</title>
-  </head>
-  <body>
-    <noscript>
-      <p>Sem JS</p>
-    </noscript>
-    <input id="criar" type="button" name="criar" value="Criar novo contato" onclick="agenda.criarContato();">
-    <input type="button" name="criar" value="Inserir novas informações" onclick="agenda.contato[0].adicionarNovo();">
-  </body>
-  <script src="classes.js"></script>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Classes</title>
+        <script src="classes.js"></script>
+    </head>
+    <body>
+        <input type="button" id="criar" value="Criar contato">
+        <input type="button" id="add" value="Adicionar Info" onclick="agenda.contatos[0].addNovo()">
+    </body>
 </html>
