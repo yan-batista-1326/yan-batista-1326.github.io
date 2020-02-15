@@ -1,10 +1,13 @@
-function disparar_prompt() {
-    var x = window.prompt("Digite seu ano de nascimento");
-    calcularIdade(x);
-}
+window.addEventListener('load', function() {
+    var data_nasc = document.getElementById('data_nasc');
+    var enviarBT = document.getElementById('enviarBT');
+    enviarBT.addEventListener('click', calcularIdade, false);
+    var resultado = document.getElementById('resultado');
+});
 
-function calcularIdade(birthday) {
-    var dob_timestamp = new Date(birthday).getTime();
-    var age = ((new Date()).getTime() - dob_timestamp) / (31556926000);
-    document.getElementById("resultado").innerHTML = (age.toFixed(1)) + " Anos";
+function calcularIdade() {
+    var dob = new Date(data_nasc.value).getTime();
+    var idade = Date.now() - dob;
+    idade = idade /1000 /60 /60 /24 /365;
+    if(dob > Date.now() ? resultado.innerHTML = "Data Invalida" : resultado.innerHTML = Math.floor(idade) + " Ano(s)");
 }
