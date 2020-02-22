@@ -20,6 +20,7 @@ body {
 
 .actual-container {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
@@ -27,6 +28,7 @@ body {
 .target-container {
     width: 357.594px;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: flex-end;
 }
