@@ -36,7 +36,6 @@ body {
 }
 
 .target-container {
-    width: 357.594px;
     display: flex;
     flex-direction: row;
     align-items: center;
