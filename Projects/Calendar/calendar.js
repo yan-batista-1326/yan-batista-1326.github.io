@@ -13,22 +13,27 @@ window.addEventListener('load', function() {
     tbl = document.getElementById('calendar');
     headMonth = document.getElementById('headMonth');
 
-    this.document.getElementById('previousMonth').addEventListener('click', previousMonth, false);
-    this.document.getElementById('nextMonth').addEventListener('click', nextMonth, false);
+    var previousBT = this.document.getElementById('previousMonth');
+    if(previousBT !== null)
+        previousBT.addEventListener('click', previousMonth, false);
+    
+    var nextBT = this.document.getElementById('nextMonth');
+    if(nextBT !== null) {
+        nextBT.addEventListener('click', nextMonth, false);
+    }
+
     generateCalendar();
 });
 
 function previousMonth() {
     if(mm != 1)
         mm--;
-    headMonth.innerHTML = months[mm - 1];
     generateCalendar();
 }
 
 function nextMonth() {
     if(mm != 12)
         mm++;
-    headMonth.innerHTML = months[mm - 1];
     generateCalendar();
 }
 
@@ -42,6 +47,7 @@ function getFirstDay(year,month) {
 
 function generateCalendar() {
     tbl.innerHTML = "";
+    headMonth.innerHTML = months[mm - 1];
 
     //Used to fill TH element with days of the week
     var date = 1;
