@@ -19,50 +19,14 @@ body {
 }
 
 .actual-container {
-    width: 30%;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
-}
-
-.actual-container select {
-    margin-left: auto;
+    justify-content: center;
 }
 
 .target-container {
-    width: 30%;
-    position: relative;
+    width: 357.594px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
-
-}
-
-.target-container input {
-    position: absolute;
-    right: 28%;
-}
-
-.target-container label {
-    position: absolute;
-    right: 70%;
-}
-
-.target-container select {
-    margin-left: auto;
-}
-
-.input-like {
-    border: 1px solid rgba(31, 36, 33, 39%);
-    width: 173px;
-    height: 19px;
-    position: absolute;
-    right: 28%;
-    background-color: white;    
-}
-  
-  .input-like spam {
-    opacity: 100%;
+    justify-content: flex-end;
 }
