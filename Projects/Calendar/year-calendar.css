@@ -19,8 +19,27 @@ body {
 .title {
     grid-area: title;
     display: flex;
+    position: relative;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+.title-link {
+    border: 1px solid #222;
+    color: #FFF;
+    background-color: #454955;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 5px;
+    transition: 0.5s;
+}
+
+.title-link:hover {
+    background-color: #363636;
+}
+
+.title-text {
+    transform: translate(45%);
 }
 
 #container {
@@ -58,33 +77,6 @@ body {
     color: #2FBF71;
     letter-spacing: 8px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .container-1 {
     grid-area: container-1;
