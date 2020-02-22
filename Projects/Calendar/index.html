@@ -2,32 +2,18 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="month-calendar.css">
         <script src="calendar.js"></script>
     </head>
     <body>
-
-        <div>
+        <div class="container">
             <div id="calendar-head">
-                <img src="https://img.icons8.com/small/24/000000/sort-left.png">
-                <select id="headMonth">
-                    <option value="1">Janeiro</option>
-                    <option value="2">Fevereiro</option>
-                    <option value="3">Março</option>
-                    <option value="4">Abril</option>
-                    <option value="5">Maio</option>
-                    <option value="6">Junho</option>
-                    <option value="7">Julho</option>
-                    <option value="8">Agosto</option>
-                    <option value="9">Setembro</option>
-                    <option value="10">Outubro</option>
-                    <option value="11">Novembro</option>
-                    <option value="12">Dezembro</option>
-                </select>
-                <img src="https://img.icons8.com/small/24/000000/sort-right.png">
+                <input type="image" id="previousMonth" src="https://img.icons8.com/small/24/000000/sort-left.png">
+                <spam id="headMonth">February</spam>
+                <input type="image" id="nextMonth" src="https://img.icons8.com/small/24/000000/sort-right.png">
             </div>
-            <table id="calendar">
-            </table>
+            <table id="calendar"></table>
         </div>
-        
     </body>
 </html>

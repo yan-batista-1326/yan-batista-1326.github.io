@@ -1,15 +1,36 @@
 var mm;
 var yy = 2020;
 var headMonth;
+var today;
+var months = [];
 
 window.addEventListener('load', function() {
-    tbl = document.getElementById('calendar');
-    
-    headMonth = document.getElementById('headMonth');
-    headMonth.addEventListener('change', generateCalendar, false);
+    today = new Date();
+    mm = today.getMonth() + 1;
 
+    months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+    tbl = document.getElementById('calendar');
+    headMonth = document.getElementById('headMonth');
+
+    this.document.getElementById('previousMonth').addEventListener('click', previousMonth, false);
+    this.document.getElementById('nextMonth').addEventListener('click', nextMonth, false);
     generateCalendar();
 });
+
+function previousMonth() {
+    if(mm != 1)
+        mm--;
+    headMonth.innerHTML = months[mm - 1];
+    generateCalendar();
+}
+
+function nextMonth() {
+    if(mm != 12)
+        mm++;
+    headMonth.innerHTML = months[mm - 1];
+    generateCalendar();
+}
 
 function getMonthLenght(year, month) {
     return new Date(year, month, 0).getDate();
@@ -21,7 +42,6 @@ function getFirstDay(year,month) {
 
 function generateCalendar() {
     tbl.innerHTML = "";
-    mm = headMonth.value;
 
     //Used to fill TH element with days of the week
     var date = 1;
@@ -52,51 +72,12 @@ function generateCalendar() {
                 cellText = document.createTextNode(date);
                 cell.appendChild(cellText);
                 row.appendChild(cell);
+                if(date == today.getDate() && mm == today.getMonth() + 1) {
+                    cell.className = "selected";
+                }
                 date++;
             }
         }
         tbl.appendChild(row);
     }
 }
-
-function converterMes(m) {
-    switch(m) {
-        case 1:
-            return "Janeiro";
-            break;
-        case 2:
-            return "Fevereiro";
-            break;
-        case 3:
-            return "Março";
-            break;
-        case 4:
-            return "Abril";
-            break;
-        case 5:
-            return "Maio";
-            break;
-        case 6:
-            return "Junho";
-            break;
-        case 7:
-            return "Julho";
-            break;
-        case 8:
-            return "Agosto";
-            break;
-        case 9:
-            return "Setembro";
-            break;
-        case 10:
-            return "Outubro";
-            break;
-        case 11:
-            return "Novembro";
-            break;
-        case 12:
-            return "Dezembro";
-            break;
-    }
-}
-

@@ -1,0 +1,36 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #454955;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto';
+}
+
+.selected {
+    background-color: #222;
+    color: #2FBF71;
+    border-radius: 50%;
+}
+
+#calendar td {
+    text-align: center;
+    padding: 5px;
+}
+
+#calendar-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+#headMonth {
+    color: #2FBF71;
+    letter-spacing: 8px;
+}
