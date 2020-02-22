@@ -17,8 +17,8 @@ body {
   align-items: flex-end;
 }
 
-.center-container input{
-    align-self: center;
+.center-container .icon{
+    transform: translate(-125.39px);
 }
 
 .title {
@@ -26,6 +26,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transform: translate(10%);
 }
 
 .actual-container {
