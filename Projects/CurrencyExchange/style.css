@@ -14,8 +14,12 @@ body {
 .center-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   justify-content: flex-end;  
+}
+
+.center-container input{
+    align-self: center;
 }
 
 .title {
