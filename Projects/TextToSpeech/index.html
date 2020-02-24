@@ -12,10 +12,25 @@
         <h1>Digit your text here</h1>
         <div class="container">
             <textarea id="userInput"></textarea>
+
             <div class="buttons">
                 <select id="voiceOptions"></select>
                 <input type="button" value="Speak" id="subBT">
             </div>
+
+            <br>
+
+            <div class="rate-cont">
+                <label for="rate">Rate: </label>
+                <input type="range" min="0" max="5" step="0.1" id="rate">
+            </div>
+
+            <div class="pitch-cont">
+                <label for="pitch">Pitch: </label>
+                <input type="range" min="0" max="5" step="0.1" id="pitch">
+            </div>
         </div>
+        
+        
     </body>
 </html>
