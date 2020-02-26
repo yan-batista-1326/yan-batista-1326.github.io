@@ -3,6 +3,11 @@ var container;
 
 window.addEventListener('load', function() {
     container = document.getElementById('container');
+    this.document.getElementById('pokeNumber').addEventListener('change', function() {
+        poke = pokeNumber.value;
+        container.innerHTML = "";
+        generateSprite();
+    })
     generateSprite();
 });
 
