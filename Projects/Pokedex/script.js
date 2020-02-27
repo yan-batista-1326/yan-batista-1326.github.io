@@ -30,7 +30,8 @@ function generatePokemonCards(data) {
     pokeContainer.className = "pokeContainer";
 
     var pokeName = document.createElement('p');
-    var pokeNameText = document.createTextNode(data.species.name);
+    var temp = data.species.name;
+    var pokeNameText = document.createTextNode(temp.charAt(0).toUpperCase() + temp.slice(1));
     pokeName.appendChild(pokeNameText);
 
     var pokeSprite = document.createElement('img');
@@ -38,7 +39,8 @@ function generatePokemonCards(data) {
     pokeSprite.src = data.sprites.front_default;
 
     var pokeType = document.createElement('p');
-    var pokeTypeText = document.createTextNode(data.types[0].type.name);
+    temp = data.types[0].type.name
+    var pokeTypeText = document.createTextNode(temp.charAt(0).toUpperCase() + temp.slice(1));
     pokeType.appendChild(pokeTypeText);
     pokeType.className = "pokeType"
         
@@ -47,7 +49,8 @@ function generatePokemonCards(data) {
     pokeContainer.appendChild(pokeType);
     if(data.types.length > 1) {
         var pokeType2 = document.createElement('p');
-        var pokeTypeText2 = document.createTextNode(data.types[1].type.name);
+        temp = data.types[1].type.name
+        var pokeTypeText2 = document.createTextNode(temp.charAt(0).toUpperCase() + temp.slice(1));
         pokeType2.appendChild(pokeTypeText2);
         pokeType2.className = "pokeType2"
         pokeContainer.appendChild(pokeType2);
