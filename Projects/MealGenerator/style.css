@@ -11,6 +11,7 @@ body {
     "content content"/
     1fr 1fr;
     grid-template-rows: 1fr 0.1fr 0.5fr;
+    color: #182B3A;
 }
 
 #titleName {
@@ -20,8 +21,16 @@ body {
     align-items: center;
     background-color: #4F90B1;
     border-bottom: 1px solid #4F90B1;
-    color: #0D1321;
     padding: 150px;
+}
+
+#titleText {
+    font-size: 30px;
+}
+
+#mealName {
+    font-size: 20px;
+    font-weight: bold;
 }
 
 #thumb {
@@ -70,6 +79,16 @@ body {
     margin-left: auto;
 }
 
-#content #howTo {
+#content #instructions {
+    display: flex; 
+    flex-direction: column;
+}
+
+#content #instructions #howTo {
     align-self: flex-end;
+}
+
+#title {
+    font-weight: bold;
+    font-size: 18px;
 }
