@@ -7,11 +7,13 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: 'VT323';
-    color: rgba(255, 255, 255, 0.904);
+    
+    
 }
 
 #container {
+    color: rgba(255, 255, 255, 0.904);
+    font-family: 'VT323';
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

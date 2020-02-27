@@ -4,6 +4,12 @@ var total = 50;
 
 window.addEventListener('load', function() {
     container = document.getElementById('container');
+    var pokeNumber = document.getElementById('pokeNumber');
+    pokeNumber.addEventListener('change', function() {
+        total = pokeNumber.value;
+        container.innerHTML = "";
+        fetchPokemons();
+    })
 });
 
 async function fetchPokemons() {
