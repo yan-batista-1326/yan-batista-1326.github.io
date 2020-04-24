@@ -48,14 +48,18 @@ body {
     margin: 5px;
 }
 
-#countDown > .hours::after {
+#countDown > #days::after {
+    content: 'Days';
+}
+
+#countDown > #hours::after {
     content: 'h';
 }
 
-#countDown > .min::after {
+#countDown > #min::after {
     content: 'min';
 }
 
-#countDown > .seconds::after {
+#countDown > #sec::after {
     content: 's';
 }
