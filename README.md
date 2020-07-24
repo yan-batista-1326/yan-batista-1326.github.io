@@ -1,7 +1,8 @@
 # Small Projects Repository
 
 This repository contains classes exercises plus small projects for self development.
-The projects are: Calendar, color spaces, currency exchenge, meal recipe generator, pokedex, random picker, text to speech.
+The projects are:
+
 *[Calendar](https://yan-batista-1326.github.io/Projects/Calendar/index.html)
 *[ColorSpace](https://yan-batista-1326.github.io/Projects/ColorSpace/index.html)
 *[Countdown](https://yan-batista-1326.github.io/Projects/CountdownTimer/index.html)
