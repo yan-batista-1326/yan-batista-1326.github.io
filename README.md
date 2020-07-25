@@ -12,6 +12,7 @@ The projects are:
 * [Random Picker](https://yan-batista-1326.github.io/Projects/RandomPicker/index.html)
 * [Rich Text](https://yan-batista-1326.github.io/Projects/RichText/index.html)
 * [Text to Speech](https://yan-batista-1326.github.io/Projects/TextToSpeech/index.html)
+* [Rock, Paper, Scissors](https://yan-batista-1326.github.io/Projects/Rock-Paper-Scissors/index.html)
 
 ## API
 
