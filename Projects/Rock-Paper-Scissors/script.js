@@ -145,6 +145,8 @@ function Restart() {
     var selectedEl = document.getElementById('selected');
     selectedEl.id = "";
 
+    Title.innerHTML = "Pick your Weapon!";
+
     rockBTN.addEventListener('click', Pick);
     paperBTN.addEventListener('click', Pick);
     scissorBTN.addEventListener('click', Pick);
